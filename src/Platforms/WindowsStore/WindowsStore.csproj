@@ -8,8 +8,8 @@
     <ProjectGuid>{5753047F-BC4D-4903-B262-51EC4F186626}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WindowsStore</RootNamespace>
-    <AssemblyName>WindowsStore</AssemblyName>
+    <RootNamespace>ManagedBass.PInvoke</RootNamespace>
+    <AssemblyName>ManagedBass.PInvoke</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
