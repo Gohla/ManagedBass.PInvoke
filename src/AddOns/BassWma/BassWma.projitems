@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>ba06c077-8201-4292-b0e9-d7e7b68834bb</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>BassWma</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BassWma.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\ClientConnectProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\WMEncodeProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\WMAEncodeFlags.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\WMATagFormat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\WMEncodeType.cs" />
+  </ItemGroup>
+</Project>

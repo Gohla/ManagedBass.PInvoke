@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>a9473c06-5e66-492a-8f5a-136696993552</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>BassAsio</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\AsioNotifyProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\AsioProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\AsioChannelActive.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\AsioChannelResetFlags.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\AsioFuture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\AsioInitFlags.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\AsioIOFormatType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\AsioNotify.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\AsioSampleFormat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\AsioTransportCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PInvoke\BassAsio.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PInvoke\Channels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\AsioChannelControls.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\AsioChannelInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\AsioDeviceInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\AsioInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\AsioInputMonitor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\AsioIOFormat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\AsioTransportParameters.cs" />
+  </ItemGroup>
+</Project>

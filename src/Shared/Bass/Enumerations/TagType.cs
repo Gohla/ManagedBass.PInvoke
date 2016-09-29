@@ -1,7 +1,4 @@
-﻿using ManagedBass.Ape;
-using ManagedBass.Tags;
-
-namespace ManagedBass
+﻿namespace ManagedBass
 {
     /// <summary>
     /// Types of what's returned by <see cref="Bass.ChannelGetTags" />.
@@ -82,7 +79,7 @@ namespace ManagedBass
 
 #if __IOS__ || __MAC__
         /// <summary>
-        /// Apple CoreAudio codec info (see <see cref="CACodecTag"/>).
+        /// Apple CoreAudio codec info (see <see cref="Tags.CACodecTag"/>).
         /// </summary>
         CoreAudioCodec = 11,
 #endif
@@ -135,7 +132,7 @@ namespace ManagedBass
         #endregion
 
         /// <summary>
-        /// + index# : <see cref="ApeBinaryTag"/> structure.
+        /// + index# : <see cref="Ape.ApeBinaryTag"/> structure.
         /// </summary>
         ApeBinary = 0x1000,
 

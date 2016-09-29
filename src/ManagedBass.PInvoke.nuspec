@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>ManagedBass.PInvoke</id>
-        <version>0.4.0</version>
+        <version>0.5.0</version>
         <title>ManagedBass.PInvoke</title>
         <authors>MathewSachin</authors>
-        <licenseUrl>https://raw.githubusercontent.com/ManagedBass/ManagedBass.PInvoke/master/LICENSE.md</licenseUrl>
+        <licenseUrl>https://raw.githubusercontent.com/ManagedBass/Resources/master/LICENSE.md</licenseUrl>
         <projectUrl>https://github.com/ManagedBass/ManagedBass.PInvoke/</projectUrl>
-        <iconUrl>https://raw.githubusercontent.com/ManagedBass/ManagedBass/master/ManagedBass.png</iconUrl>
+        <iconUrl>https://github.com/ManagedBass.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>
 ManagedBass PInvoke Library for un4seen BASS.
@@ -20,19 +20,22 @@ This library was built from the core of ManagedBass and now is referenced by it.
         <tags>Bass Wasapi Asio Record Audio Music</tags>
     </metadata>
     <files>
-        <file src="Windows\bin\Release\ManagedBass.PInvoke.dll" target="lib\net45"/>
-        <file src="Windows\bin\Release\ManagedBass.PInvoke.xml" target="lib\net45"/>
+        <file src="Platforms\Windows\bin\Release\ManagedBass.PInvoke.dll" target="lib\net45"/>
+        <file src="Platforms\Windows\bin\Release\ManagedBass.PInvoke.xml" target="lib\net45"/>
 
-        <file src="Android\bin\Release\ManagedBass.PInvoke.dll" target="lib\MonoAndroid"/>
-        <file src="Android\bin\Release\ManagedBass.PInvoke.xml" target="lib\MonoAndroid"/>
+        <file src="Platforms\Android\bin\Release\ManagedBass.PInvoke.dll" target="lib\MonoAndroid"/>
+        <file src="Platforms\Android\bin\Release\ManagedBass.PInvoke.xml" target="lib\MonoAndroid"/>
 
-        <file src="Mac\bin\Release\ManagedBass.PInvoke.dll" target="lib\Xamarin.Mac"/>
-        <file src="Mac\bin\Release\ManagedBass.PInvoke.xml" target="lib\Xamarin.Mac"/>
+        <file src="Platforms\Mac\bin\Release\ManagedBass.PInvoke.dll" target="lib\Xamarin.Mac"/>
+        <file src="Platforms\Mac\bin\Release\ManagedBass.PInvoke.xml" target="lib\Xamarin.Mac"/>
 
-        <file src="iOS\bin\Release\ManagedBass.PInvoke.dll" target="lib\Xamarin.iOS"/>
-        <file src="iOS\bin\Release\ManagedBass.PInvoke.xml" target="lib\Xamarin.iOS"/>
+        <file src="Platforms\iOS\bin\Release\ManagedBass.PInvoke.dll" target="lib\Xamarin.iOS"/>
+        <file src="Platforms\iOS\bin\Release\ManagedBass.PInvoke.xml" target="lib\Xamarin.iOS"/>
 
-        <file src="Hybrid\bin\Release\ManagedBass.PInvoke.dll" target="lib\portable-net45+netcore45+wpa81+MonoAndroid+Xamarin.Mac+Xamarin.iOS+MonoTouch"/>
-        <file src="Hybrid\bin\Release\ManagedBass.PInvoke.xml" target="lib\portable-net45+netcore45+wpa81+MonoAndroid+Xamarin.Mac+Xamarin.iOS+MonoTouch"/>
+        <file src="Platforms\WindowsStore\bin\Release\ManagedBass.PInvoke.dll" target="lib\wpa81"/>
+        <file src="Platforms\WindowsStore\bin\Release\ManagedBass.PInvoke.xml" target="lib\wpa81"/>
+
+        <file src="Portable\bin\Release\ManagedBass.PInvoke.dll" target="lib\portable-net45+netcore45+wpa81+MonoAndroid+Xamarin.Mac+Xamarin.iOS+MonoTouch"/>
+        <file src="Portable\bin\Release\ManagedBass.PInvoke.xml" target="lib\portable-net45+netcore45+wpa81+MonoAndroid+Xamarin.Mac+Xamarin.iOS+MonoTouch"/>
     </files>
 </package>

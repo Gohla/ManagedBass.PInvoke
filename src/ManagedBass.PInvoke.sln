@@ -1,35 +1,197 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linux", "Linux\Linux.csproj", "{5836FB0C-47B9-4370-B523-6E3B01A63F86}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linux", "Platforms\Linux\Linux.csproj", "{5836FB0C-47B9-4370-B523-6E3B01A63F86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mac", "Mac\Mac.csproj", "{1E6370CD-B475-4FDC-9F6F-8A5ECFC9538C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mac", "Platforms\Mac\Mac.csproj", "{1E6370CD-B475-4FDC-9F6F-8A5ECFC9538C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Windows", "Windows\Windows.csproj", "{57C787D9-351E-4C61-9ABB-619F6F6AA03A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Windows", "Platforms\Windows\Windows.csproj", "{57C787D9-351E-4C61-9ABB-619F6F6AA03A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOS", "iOS\iOS.csproj", "{B07F0848-A4FB-406E-98D6-620CDAE881D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOS", "Platforms\iOS\iOS.csproj", "{B07F0848-A4FB-406E-98D6-620CDAE881D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Android", "Android\Android.csproj", "{AD2F2FC0-636D-45B3-A400-94D579CF143F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Android", "Platforms\Android\Android.csproj", "{AD2F2FC0-636D-45B3-A400-94D579CF143F}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{EC57D38F-2B7C-4547-9012-3F1AAD7E8BAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hybrid", "Hybrid\Hybrid.csproj", "{1AAB26ED-862E-42DD-A5B2-A6BFA67B8FB2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins", "Shared\Plugins\Plugins.csproj", "{4D392CD1-E5ED-4973-B08E-D2337B2253D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable", "Portable\Portable.csproj", "{1AAB26ED-862E-42DD-A5B2-A6BFA67B8FB2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{37F1AD83-771C-49F6-AE0F-D824181F62F0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AddOns", "AddOns", "{AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassCd", "AddOns\BassCd\BassCd.shproj", "{FC50D963-1B17-473D-8D13-C236632F4204}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassDsd", "AddOns\BassDsd\BassDsd.shproj", "{B25AFE3D-28B9-41E6-9011-0F87C5405962}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassEnc", "AddOns\BassEnc\BassEnc.shproj", "{F0FC2F2C-D971-46E3-8C6C-6C8A0F3B70CD}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassAac", "AddOns\BassAac\BassAac.shproj", "{A532A19E-983D-4503-9633-6A931FA3EDBA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassMix", "AddOns\BassMix\BassMix.shproj", "{235EAE3F-03A5-451E-AB4A-6BE5C7370590}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsStore", "Platforms\WindowsStore\WindowsStore.csproj", "{5753047F-BC4D-4903-B262-51EC4F186626}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassMidi", "AddOns\BassMidi\BassMidi.shproj", "{6C6EBFEB-424A-417A-B894-9654B463C770}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassFx", "AddOns\BassFx\BassFx.shproj", "{BD3CD0EE-BFEE-492F-BD75-5CE00C1865B3}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassFlac", "AddOns\BassFlac\BassFlac.shproj", "{2A9879CF-75AB-41CB-A0D0-3DDD59692C08}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassApe", "AddOns\BassApe\BassApe.shproj", "{99B477B7-24EF-4F74-805D-AAA8AD286157}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassAc3", "AddOns\BassAc3\BassAc3.shproj", "{60FD52C2-F41B-45E8-A8E6-18DC687551C7}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassAlac", "AddOns\BassAlac\BassAlac.shproj", "{85D0C198-BE93-43E4-8849-F684AFF53A64}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassHls", "AddOns\BassHls\BassHls.shproj", "{701CE0EA-5840-46F3-8905-36DB89860D40}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassMpc", "AddOns\BassMpc\BassMpc.shproj", "{FA922D44-4856-4E95-A94E-229A556E176F}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassOpus", "AddOns\BassOpus\BassOpus.shproj", "{05AE14F8-70C9-4E2F-AF5A-800FDD84BBD3}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassSpx", "AddOns\BassSpx\BassSpx.shproj", "{2DA10EC6-DE46-430D-A161-9F2478CD1D8B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassTta", "AddOns\BassTta\BassTta.shproj", "{C245F584-4DBB-4D18-936F-236BB15E1BFA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassWv", "AddOns\BassWv\BassWv.shproj", "{89D3692D-5422-4A0A-BC6A-09C75BBA52FF}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassAsio", "AddOns\BassAsio\BassAsio.shproj", "{A9473C06-5E66-492A-8F5A-136696993552}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassWasapi", "AddOns\BassWasapi\BassWasapi.shproj", "{94F7B485-CB95-4C23-B9A4-3AE1D7345FAA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassWinamp", "AddOns\BassWinamp\BassWinamp.shproj", "{B7CC0064-32BC-42C5-95BC-8BFDF2D70C75}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassWma", "AddOns\BassWma\BassWma.shproj", "{BA06C077-8201-4292-B0E9-D7E7B68834BB}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassAdx", "AddOns\BassAdx\BassAdx.shproj", "{DDDD45BF-A967-4BB5-8FF4-47CF7E5C453F}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassAix", "AddOns\BassAix\BassAix.shproj", "{7A6E8DB6-5DF5-460B-A17A-B94F1D3007A2}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassOfr", "AddOns\BassOfr\BassOfr.shproj", "{57DD58B8-0A2A-479A-8715-1F3C692AA269}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Shared\PInvoke.projitems*{ec57d38f-2b7c-4547-9012-3f1aad7e8bab}*SharedItemsImports = 13
-		Shared\PInvoke.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
-		Shared\PInvoke.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
-		Shared\PInvoke.projitems*{1aab26ed-862e-42dd-a5b2-a6bfa67b8fb2}*SharedItemsImports = 4
-		Shared\PInvoke.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
-		Shared\PInvoke.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
-		Shared\PInvoke.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
+		AddOns\BassOpus\BassOpus.projitems*{05ae14f8-70c9-4e2f-af5a-800fdd84bbd3}*SharedItemsImports = 13
+		AddOns\BassFx\BassFx.projitems*{1aab26ed-862e-42dd-a5b2-a6bfa67b8fb2}*SharedItemsImports = 4
+		AddOns\BassMidi\BassMidi.projitems*{1aab26ed-862e-42dd-a5b2-a6bfa67b8fb2}*SharedItemsImports = 4
+		AddOns\BassMix\BassMix.projitems*{1aab26ed-862e-42dd-a5b2-a6bfa67b8fb2}*SharedItemsImports = 4
+		Shared\Shared.projitems*{1aab26ed-862e-42dd-a5b2-a6bfa67b8fb2}*SharedItemsImports = 4
+		AddOns\BassAc3\BassAc3.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassApe\BassApe.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassDsd\BassDsd.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassEnc\BassEnc.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassFlac\BassFlac.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassFx\BassFx.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassHls\BassHls.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassMidi\BassMidi.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassMix\BassMix.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassMpc\BassMpc.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassOpus\BassOpus.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassSpx\BassSpx.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassTta\BassTta.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassWv\BassWv.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		Shared\Shared.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassMix\BassMix.projitems*{235eae3f-03a5-451e-ab4a-6be5c7370590}*SharedItemsImports = 13
+		AddOns\BassFlac\BassFlac.projitems*{2a9879cf-75ab-41cb-a0d0-3ddd59692c08}*SharedItemsImports = 13
+		AddOns\BassSpx\BassSpx.projitems*{2da10ec6-de46-430d-a161-9f2478cd1d8b}*SharedItemsImports = 13
+		AddOns\BassFx\BassFx.projitems*{5753047f-bc4d-4903-b262-51ec4f186626}*SharedItemsImports = 4
+		AddOns\BassMidi\BassMidi.projitems*{5753047f-bc4d-4903-b262-51ec4f186626}*SharedItemsImports = 4
+		AddOns\BassMix\BassMix.projitems*{5753047f-bc4d-4903-b262-51ec4f186626}*SharedItemsImports = 4
+		Shared\Shared.projitems*{5753047f-bc4d-4903-b262-51ec4f186626}*SharedItemsImports = 4
+		AddOns\BassAac\BassAac.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassAc3\BassAc3.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassAdx\BassAdx.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassAix\BassAix.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassAlac\BassAlac.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassApe\BassApe.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassAsio\BassAsio.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassCd\BassCd.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassDsd\BassDsd.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassEnc\BassEnc.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassFlac\BassFlac.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassFx\BassFx.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassHls\BassHls.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassMidi\BassMidi.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassMix\BassMix.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassMpc\BassMpc.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassOfr\BassOfr.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassOpus\BassOpus.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassSpx\BassSpx.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassTta\BassTta.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassWasapi\BassWasapi.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassWinamp\BassWinamp.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassWma\BassWma.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassWv\BassWv.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		Shared\Shared.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassOfr\BassOfr.projitems*{57dd58b8-0a2a-479a-8715-1f3c692aa269}*SharedItemsImports = 13
+		AddOns\BassAac\BassAac.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassAc3\BassAc3.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassAlac\BassAlac.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassApe\BassApe.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassCd\BassCd.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassDsd\BassDsd.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassEnc\BassEnc.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassFlac\BassFlac.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassFx\BassFx.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassHls\BassHls.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassMidi\BassMidi.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassMix\BassMix.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassMpc\BassMpc.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassOpus\BassOpus.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassSpx\BassSpx.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassTta\BassTta.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassWv\BassWv.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		Shared\Shared.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassAc3\BassAc3.projitems*{60fd52c2-f41b-45e8-a8e6-18dc687551c7}*SharedItemsImports = 13
+		AddOns\BassMidi\BassMidi.projitems*{6c6ebfeb-424a-417a-b894-9654b463c770}*SharedItemsImports = 13
+		AddOns\BassHls\BassHls.projitems*{701ce0ea-5840-46f3-8905-36db89860d40}*SharedItemsImports = 13
+		AddOns\BassAix\BassAix.projitems*{7a6e8db6-5df5-460b-a17a-b94f1d3007a2}*SharedItemsImports = 13
+		AddOns\BassAlac\BassAlac.projitems*{85d0c198-be93-43e4-8849-f684aff53a64}*SharedItemsImports = 13
+		AddOns\BassWv\BassWv.projitems*{89d3692d-5422-4a0a-bc6a-09c75bba52ff}*SharedItemsImports = 13
+		AddOns\BassWasapi\BassWasapi.projitems*{94f7b485-cb95-4c23-b9a4-3ae1d7345faa}*SharedItemsImports = 13
+		AddOns\BassApe\BassApe.projitems*{99b477b7-24ef-4f74-805d-aaa8ad286157}*SharedItemsImports = 13
+		AddOns\BassAac\BassAac.projitems*{a532a19e-983d-4503-9633-6a931fa3edba}*SharedItemsImports = 13
+		AddOns\BassAsio\BassAsio.projitems*{a9473c06-5e66-492a-8f5a-136696993552}*SharedItemsImports = 13
+		AddOns\BassAac\BassAac.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassAlac\BassAlac.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassApe\BassApe.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassDsd\BassDsd.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassEnc\BassEnc.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassFlac\BassFlac.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassFx\BassFx.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassHls\BassHls.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassMidi\BassMidi.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassMix\BassMix.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassMpc\BassMpc.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassOpus\BassOpus.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassTta\BassTta.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassWv\BassWv.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		Shared\Shared.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassApe\BassApe.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
+		AddOns\BassDsd\BassDsd.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
+		AddOns\BassEnc\BassEnc.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
+		AddOns\BassFlac\BassFlac.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
+		AddOns\BassFx\BassFx.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
+		AddOns\BassHls\BassHls.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
+		AddOns\BassMidi\BassMidi.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
+		AddOns\BassMix\BassMix.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
+		AddOns\BassMpc\BassMpc.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
+		AddOns\BassOpus\BassOpus.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
+		AddOns\BassTta\BassTta.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
+		AddOns\BassWv\BassWv.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
+		Shared\Shared.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
+		AddOns\BassDsd\BassDsd.projitems*{b25afe3d-28b9-41e6-9011-0f87c5405962}*SharedItemsImports = 13
+		AddOns\BassWinamp\BassWinamp.projitems*{b7cc0064-32bc-42c5-95bc-8bfdf2d70c75}*SharedItemsImports = 13
+		AddOns\BassWma\BassWma.projitems*{ba06c077-8201-4292-b0e9-d7e7b68834bb}*SharedItemsImports = 13
+		AddOns\BassFx\BassFx.projitems*{bd3cd0ee-bfee-492f-bd75-5ce00c1865b3}*SharedItemsImports = 13
+		AddOns\BassTta\BassTta.projitems*{c245f584-4dbb-4d18-936f-236bb15e1bfa}*SharedItemsImports = 13
+		AddOns\BassAdx\BassAdx.projitems*{dddd45bf-a967-4bb5-8ff4-47cf7e5c453f}*SharedItemsImports = 13
+		Shared\Shared.projitems*{ec57d38f-2b7c-4547-9012-3f1aad7e8bab}*SharedItemsImports = 13
+		AddOns\BassEnc\BassEnc.projitems*{f0fc2f2c-d971-46e3-8c6c-6c8a0f3b70cd}*SharedItemsImports = 13
+		AddOns\BassMpc\BassMpc.projitems*{fa922d44-4856-4e95-a94e-229a556e176f}*SharedItemsImports = 13
+		AddOns\BassCd\BassCd.projitems*{fc50d963-1b17-473d-8d13-c236632f4204}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,9 +222,10 @@ Global
 		{1AAB26ED-862E-42DD-A5B2-A6BFA67B8FB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AAB26ED-862E-42DD-A5B2-A6BFA67B8FB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AAB26ED-862E-42DD-A5B2-A6BFA67B8FB2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4D392CD1-E5ED-4973-B08E-D2337B2253D8}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{4D392CD1-E5ED-4973-B08E-D2337B2253D8}.Release|Any CPU.ActiveCfg = Debug|x86
-		{4D392CD1-E5ED-4973-B08E-D2337B2253D8}.Release|Any CPU.Build.0 = Debug|x86
+		{5753047F-BC4D-4903-B262-51EC4F186626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5753047F-BC4D-4903-B262-51EC4F186626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5753047F-BC4D-4903-B262-51EC4F186626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5753047F-BC4D-4903-B262-51EC4F186626}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,5 +236,30 @@ Global
 		{57C787D9-351E-4C61-9ABB-619F6F6AA03A} = {37F1AD83-771C-49F6-AE0F-D824181F62F0}
 		{B07F0848-A4FB-406E-98D6-620CDAE881D9} = {37F1AD83-771C-49F6-AE0F-D824181F62F0}
 		{AD2F2FC0-636D-45B3-A400-94D579CF143F} = {37F1AD83-771C-49F6-AE0F-D824181F62F0}
+		{FC50D963-1B17-473D-8D13-C236632F4204} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{B25AFE3D-28B9-41E6-9011-0F87C5405962} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{F0FC2F2C-D971-46E3-8C6C-6C8A0F3B70CD} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{A532A19E-983D-4503-9633-6A931FA3EDBA} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{235EAE3F-03A5-451E-AB4A-6BE5C7370590} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{5753047F-BC4D-4903-B262-51EC4F186626} = {37F1AD83-771C-49F6-AE0F-D824181F62F0}
+		{6C6EBFEB-424A-417A-B894-9654B463C770} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{BD3CD0EE-BFEE-492F-BD75-5CE00C1865B3} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{2A9879CF-75AB-41CB-A0D0-3DDD59692C08} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{99B477B7-24EF-4F74-805D-AAA8AD286157} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{60FD52C2-F41B-45E8-A8E6-18DC687551C7} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{85D0C198-BE93-43E4-8849-F684AFF53A64} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{701CE0EA-5840-46F3-8905-36DB89860D40} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{FA922D44-4856-4E95-A94E-229A556E176F} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{05AE14F8-70C9-4E2F-AF5A-800FDD84BBD3} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{2DA10EC6-DE46-430D-A161-9F2478CD1D8B} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{C245F584-4DBB-4D18-936F-236BB15E1BFA} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{89D3692D-5422-4A0A-BC6A-09C75BBA52FF} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{A9473C06-5E66-492A-8F5A-136696993552} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{94F7B485-CB95-4C23-B9A4-3AE1D7345FAA} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{B7CC0064-32BC-42C5-95BC-8BFDF2D70C75} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{BA06C077-8201-4292-B0E9-D7E7B68834BB} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{DDDD45BF-A967-4BB5-8FF4-47CF7E5C453F} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{7A6E8DB6-5DF5-460B-A17A-B94F1D3007A2} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{57DD58B8-0A2A-479A-8715-1F3C692AA269} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
 	EndGlobalSection
 EndGlobal

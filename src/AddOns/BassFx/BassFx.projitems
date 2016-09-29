@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>bd3cd0ee-bfee-492f-bd75-5ce00c1865b3</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>BassFx</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BassFx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\AutoWahParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\BQFParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\ChorusParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\CompressorParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\DampParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\DistortionParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\EchoParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\PeakEQParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\PhaserParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\PitchShiftParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\ReverbParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\RotateParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BQFType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\BPMBeatProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\BPMProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\BPMProgressProcedure.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>fc50d963-1b17-473d-8d13-c236632f4204</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>BassCd</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BassCd.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CDDataProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\CDDataType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\CDDoorAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\CDID.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\CDInterface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\CDReadWriteFlags.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\TOCControlFlags.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\TOCMode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\CDInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\TOC.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\TOCTrack.cs" />
+  </ItemGroup>
+</Project>

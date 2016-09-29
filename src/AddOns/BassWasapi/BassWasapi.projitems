@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>94f7b485-cb95-4c23-b9a4-3ae1d7345faa</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>BassWasapi</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BassWasapi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\WasapiNotifyProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\WasapiProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\WasapiDeviceInfoFlags.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\WasapiDeviceType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\WasapiFormat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\WasapiInitFlags.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\WasapiNotificationType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\WasapiVolumeTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\WasapiDeviceInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\WasapiInfo.cs" />
+  </ItemGroup>
+</Project>
