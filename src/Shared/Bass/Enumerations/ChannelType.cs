@@ -28,6 +28,11 @@ namespace ManagedBass
         /// </summary>
         MO3 = 0x100,
 
+        /// <summary>
+        /// ZXTune.
+        /// </summary>
+        ZXTune = 0x10000,
+
         #region HStream
         /// <summary>
         /// User sample stream.

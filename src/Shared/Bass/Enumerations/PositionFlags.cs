@@ -36,6 +36,16 @@ namespace ManagedBass
         CDTrack,
 
         /// <summary>
+        /// ZXTune Sub Count.
+        /// </summary>
+        ZXTuneSubCount = 0x101,
+
+        /// <summary>
+        /// ZXTune Sub Length.
+        /// </summary>
+        ZXTuneSubLength = 0x102,
+
+        /// <summary>
         /// Midi Add-On: Let the old sound decay naturally (including reverb) when changing the position,
         /// including looping and such can also be used in <see cref="Bass.ChannelSetPosition"/> calls to have it apply to particular position changes.
         /// </summary>

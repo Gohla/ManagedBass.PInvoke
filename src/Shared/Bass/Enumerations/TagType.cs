@@ -107,6 +107,11 @@
         /// </summary>
         WaveFormat = 14,
 
+        /// <summary>
+        /// ZXTune Sub Ogg.
+        /// </summary>
+        ZXTuneSuOgg = 0x101,
+
         #region Riff
         /// <summary>
         /// RIFF/WAVE tags : array of null-terminated ANSI strings.

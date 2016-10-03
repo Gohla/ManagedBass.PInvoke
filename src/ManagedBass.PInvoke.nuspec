@@ -32,9 +32,6 @@ This library was built from the core of ManagedBass and now is referenced by it.
         <file src="Platforms\iOS\bin\Release\ManagedBass.PInvoke.dll" target="lib\Xamarin.iOS"/>
         <file src="Platforms\iOS\bin\Release\ManagedBass.PInvoke.xml" target="lib\Xamarin.iOS"/>
 
-        <file src="Platforms\WindowsStore\bin\Release\ManagedBass.PInvoke.dll" target="lib\wpa81"/>
-        <file src="Platforms\WindowsStore\bin\Release\ManagedBass.PInvoke.xml" target="lib\wpa81"/>
-
         <file src="Portable\bin\Release\ManagedBass.PInvoke.dll" target="lib\portable-net45+netcore45+wpa81+MonoAndroid+Xamarin.Mac+Xamarin.iOS+MonoTouch"/>
         <file src="Portable\bin\Release\ManagedBass.PInvoke.xml" target="lib\portable-net45+netcore45+wpa81+MonoAndroid+Xamarin.Mac+Xamarin.iOS+MonoTouch"/>
     </files>

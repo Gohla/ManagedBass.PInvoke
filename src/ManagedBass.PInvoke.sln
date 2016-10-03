@@ -71,6 +71,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassAix", "AddOns\BassAix\B
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassOfr", "AddOns\BassOfr\BassOfr.shproj", "{57DD58B8-0A2A-479A-8715-1F3C692AA269}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassZXTune", "AddOns\BassZXTune\BassZXTune.shproj", "{F054C056-249C-43D4-96E3-0C61BD70604C}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		AddOns\BassOpus\BassOpus.projitems*{05ae14f8-70c9-4e2f-af5a-800fdd84bbd3}*SharedItemsImports = 13
@@ -92,6 +94,7 @@ Global
 		AddOns\BassSpx\BassSpx.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
 		AddOns\BassTta\BassTta.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
 		AddOns\BassWv\BassWv.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassZXTune\BassZXTune.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
 		Shared\Shared.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
 		AddOns\BassMix\BassMix.projitems*{235eae3f-03a5-451e-ab4a-6be5c7370590}*SharedItemsImports = 13
 		AddOns\BassFlac\BassFlac.projitems*{2a9879cf-75ab-41cb-a0d0-3ddd59692c08}*SharedItemsImports = 13
@@ -124,6 +127,7 @@ Global
 		AddOns\BassWinamp\BassWinamp.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
 		AddOns\BassWma\BassWma.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
 		AddOns\BassWv\BassWv.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassZXTune\BassZXTune.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
 		Shared\Shared.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
 		AddOns\BassOfr\BassOfr.projitems*{57dd58b8-0a2a-479a-8715-1f3c692aa269}*SharedItemsImports = 13
 		AddOns\BassAac\BassAac.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
@@ -143,6 +147,7 @@ Global
 		AddOns\BassSpx\BassSpx.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
 		AddOns\BassTta\BassTta.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
 		AddOns\BassWv\BassWv.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
+		AddOns\BassZXTune\BassZXTune.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
 		Shared\Shared.projitems*{5836fb0c-47b9-4370-b523-6e3b01a63f86}*SharedItemsImports = 4
 		AddOns\BassAc3\BassAc3.projitems*{60fd52c2-f41b-45e8-a8e6-18dc687551c7}*SharedItemsImports = 13
 		AddOns\BassMidi\BassMidi.projitems*{6c6ebfeb-424a-417a-b894-9654b463c770}*SharedItemsImports = 13
@@ -168,6 +173,7 @@ Global
 		AddOns\BassOpus\BassOpus.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
 		AddOns\BassTta\BassTta.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
 		AddOns\BassWv\BassWv.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
+		AddOns\BassZXTune\BassZXTune.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
 		Shared\Shared.projitems*{ad2f2fc0-636d-45b3-a400-94d579cf143f}*SharedItemsImports = 4
 		AddOns\BassApe\BassApe.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
 		AddOns\BassDsd\BassDsd.projitems*{b07f0848-a4fb-406e-98d6-620cdae881d9}*SharedItemsImports = 4
@@ -189,6 +195,7 @@ Global
 		AddOns\BassTta\BassTta.projitems*{c245f584-4dbb-4d18-936f-236bb15e1bfa}*SharedItemsImports = 13
 		AddOns\BassAdx\BassAdx.projitems*{dddd45bf-a967-4bb5-8ff4-47cf7e5c453f}*SharedItemsImports = 13
 		Shared\Shared.projitems*{ec57d38f-2b7c-4547-9012-3f1aad7e8bab}*SharedItemsImports = 13
+		AddOns\BassZXTune\BassZXTune.projitems*{f054c056-249c-43d4-96e3-0c61bd70604c}*SharedItemsImports = 13
 		AddOns\BassEnc\BassEnc.projitems*{f0fc2f2c-d971-46e3-8c6c-6c8a0f3b70cd}*SharedItemsImports = 13
 		AddOns\BassMpc\BassMpc.projitems*{fa922d44-4856-4e95-a94e-229a556e176f}*SharedItemsImports = 13
 		AddOns\BassCd\BassCd.projitems*{fc50d963-1b17-473d-8d13-c236632f4204}*SharedItemsImports = 13
@@ -261,5 +268,6 @@ Global
 		{DDDD45BF-A967-4BB5-8FF4-47CF7E5C453F} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
 		{7A6E8DB6-5DF5-460B-A17A-B94F1D3007A2} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
 		{57DD58B8-0A2A-479A-8715-1F3C692AA269} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{F054C056-249C-43D4-96E3-0C61BD70604C} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
 	EndGlobalSection
 EndGlobal
