@@ -97,7 +97,7 @@ namespace ManagedBass
             var b = BASS_ChannelRemoveDSP(Handle, DSP);
 
             if (b)
-                Extensions.ChannelReferences.Remove<DSPProcedure>(Handle, DSP);
+                Extensions.ChannelReferences.Remove(Handle, DSP);
 
             return b;
         }
@@ -144,10 +144,18 @@ namespace ManagedBass
         /// </remarks>
         public static int ChannelSetSync(int Handle, SyncFlags Type, long Parameter, SyncProcedure Procedure, IntPtr User = default(IntPtr))
         {
-            var h = BASS_ChannelSetSync(Handle, Type, Parameter, Procedure, User);
+            // Define a dummy SyncProcedure for OneTime syncs.
+            var proc = Type.HasFlag(SyncFlags.Onetime)
+                ? ((I, Channel, Data, Ptr) =>
+                {
+                    Procedure(I, Channel, Data, Ptr);
+                    Extensions.ChannelReferences.Remove(Channel, I);
+                }) : Procedure;
+
+            var h = BASS_ChannelSetSync(Handle, Type, Parameter, proc, User);
 
             if (h != 0)
-                Extensions.ChannelReferences.Add(Handle, h, Procedure);
+                Extensions.ChannelReferences.Add(Handle, h, proc);
 
             return h;
         }
@@ -170,7 +178,7 @@ namespace ManagedBass
             var b = BASS_ChannelRemoveSync(Handle, Sync);
 
             if (b)
-                Extensions.ChannelReferences.Remove<SyncProcedure>(Handle, Sync);
+                Extensions.ChannelReferences.Remove(Handle, Sync);
 
             return b;
         }

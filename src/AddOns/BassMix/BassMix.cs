@@ -769,10 +769,18 @@ namespace ManagedBass.Mix
         /// <exception cref="Errors.Parameter">An illegal <paramref name="Parameter" /> was specified.</exception>
         public static int ChannelSetSync(int Handle, SyncFlags Type, long Parameter, SyncProcedure Procedure, IntPtr User = default(IntPtr))
         {
-            var h = BASS_Mixer_ChannelSetSync(Handle, Type, Parameter, Procedure, User);
+            // Define a dummy SyncProcedure for OneTime syncs.
+            var proc = Type.HasFlag(SyncFlags.Onetime)
+                ? ((I, Channel, Data, Ptr) =>
+                {
+                    Procedure(I, Channel, Data, Ptr);
+                    Extensions.ChannelReferences.Remove(Channel, I);
+                }) : Procedure;
+
+            var h = BASS_Mixer_ChannelSetSync(Handle, Type, Parameter, proc, User);
 
             if (h != 0)
-                Extensions.ChannelReferences.Add(Handle, h, Procedure);
+                Extensions.ChannelReferences.Add(Handle, h, proc);
 
             return h;
         }
@@ -821,10 +829,18 @@ namespace ManagedBass.Mix
         /// <exception cref="Errors.Parameter">An illegal <paramref name="Parameter" /> was specified.</exception>
         public static int ChannelSetSync(int Handle, SyncFlags Type, long Parameter, SyncProcedureEx Procedure, IntPtr User = default(IntPtr))
         {
-            var h = BASS_Mixer_ChannelSetSync(Handle, (int)Type | 0x1000000, Parameter, Procedure, User);
+            // Define a dummy SyncProcedureEx for OneTime syncs.
+            var proc = Type.HasFlag(SyncFlags.Onetime)
+                ? ((I, Channel, Data, Ptr, Offset) =>
+                {
+                    Procedure(I, Channel, Data, Ptr, Offset);
+                    Extensions.ChannelReferences.Remove(Channel, I);
+                }) : Procedure;
+
+            var h = BASS_Mixer_ChannelSetSync(Handle, (int)Type | 0x1000000, Parameter, proc, User);
 
             if (h != 0)
-                Extensions.ChannelReferences.Add(Handle, h, Procedure);
+                Extensions.ChannelReferences.Add(Handle, h, proc);
 
             return h;
         }
@@ -845,7 +861,7 @@ namespace ManagedBass.Mix
             var b = BASS_Mixer_ChannelRemoveSync(Handle, Sync);
 
             if (b)
-                Extensions.ChannelReferences.Remove<SyncProcedure>(Handle, Sync);
+                Extensions.ChannelReferences.Remove(Handle, Sync);
 
             return b;
         }

@@ -78,7 +78,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEffectParameter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Plugin.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ProcedureDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ReferenceHolder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Resolution.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tags\BextTag.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tags\CACodecTag.cs" />
