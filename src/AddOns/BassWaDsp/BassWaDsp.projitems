@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f6b95880-f77a-419a-a4fa-fb0cd95aee6d</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>BassWaDsp</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BassWaDsp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BassWaDspIpc.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WinampWinProcedure.cs" />
+  </ItemGroup>
+</Project>
