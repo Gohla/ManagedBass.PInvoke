@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>23048deb-1819-4007-a12f-8c57872ce38a</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>BassSfx</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BassSfx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BassSfxError.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BassSfxFlags.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BassSfxPlugin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BassSfxPluginInfo.cs" />
+  </ItemGroup>
+</Project>
