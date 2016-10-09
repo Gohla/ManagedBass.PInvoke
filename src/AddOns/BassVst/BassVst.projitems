@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>ddd0925a-d10f-43bd-9130-b47021d34e3a</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>BassVst</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BassVst.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassVstAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassVstDispatcherOpCodes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassVstDsp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\BassVstAudioMasterParam.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\BassVstInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\BassVstParamInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VstProcedure.cs" />
+  </ItemGroup>
+</Project>

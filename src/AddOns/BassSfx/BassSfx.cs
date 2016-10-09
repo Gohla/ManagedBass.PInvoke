@@ -8,7 +8,7 @@ namespace ManagedBass.Sfx
 	/// </summary>
 	public static class BassSfx
 	{
-		const string DllName = "bass_sfx.dll";
+		const string DllName = "bass_sfx";
 
 	    static IntPtr hLib;
 

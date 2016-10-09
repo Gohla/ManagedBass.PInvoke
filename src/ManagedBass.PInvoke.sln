@@ -77,6 +77,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassWaDsp", "AddOns\BassWaD
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassSfx", "AddOns\BassSfx\BassSfx.shproj", "{23048DEB-1819-4007-A12F-8C57872CE38A}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassVst", "AddOns\BassVst\BassVst.shproj", "{DDD0925A-D10F-43BD-9130-B47021D34E3A}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		AddOns\BassOpus\BassOpus.projitems*{05ae14f8-70c9-4e2f-af5a-800fdd84bbd3}*SharedItemsImports = 13
@@ -97,6 +99,7 @@ Global
 		AddOns\BassOpus\BassOpus.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
 		AddOns\BassSpx\BassSpx.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
 		AddOns\BassTta\BassTta.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
+		AddOns\BassVst\BassVst.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
 		AddOns\BassWv\BassWv.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
 		AddOns\BassZXTune\BassZXTune.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
 		Shared\Shared.projitems*{1e6370cd-b475-4fdc-9f6f-8a5ecfc9538c}*SharedItemsImports = 4
@@ -129,6 +132,7 @@ Global
 		AddOns\BassSfx\BassSfx.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
 		AddOns\BassSpx\BassSpx.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
 		AddOns\BassTta\BassTta.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassVst\BassVst.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
 		AddOns\BassWaDsp\BassWaDsp.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
 		AddOns\BassWasapi\BassWasapi.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
 		AddOns\BassWinamp\BassWinamp.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
@@ -200,6 +204,7 @@ Global
 		AddOns\BassWma\BassWma.projitems*{ba06c077-8201-4292-b0e9-d7e7b68834bb}*SharedItemsImports = 13
 		AddOns\BassFx\BassFx.projitems*{bd3cd0ee-bfee-492f-bd75-5ce00c1865b3}*SharedItemsImports = 13
 		AddOns\BassTta\BassTta.projitems*{c245f584-4dbb-4d18-936f-236bb15e1bfa}*SharedItemsImports = 13
+		AddOns\BassVst\BassVst.projitems*{ddd0925a-d10f-43bd-9130-b47021d34e3a}*SharedItemsImports = 13
 		AddOns\BassAdx\BassAdx.projitems*{dddd45bf-a967-4bb5-8ff4-47cf7e5c453f}*SharedItemsImports = 13
 		Shared\Shared.projitems*{ec57d38f-2b7c-4547-9012-3f1aad7e8bab}*SharedItemsImports = 13
 		AddOns\BassZXTune\BassZXTune.projitems*{f054c056-249c-43d4-96e3-0c61bd70604c}*SharedItemsImports = 13
@@ -279,5 +284,6 @@ Global
 		{F054C056-249C-43D4-96E3-0C61BD70604C} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
 		{F6B95880-F77A-419A-A4FA-FB0CD95AEE6D} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
 		{23048DEB-1819-4007-A12F-8C57872CE38A} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{DDD0925A-D10F-43BD-9130-B47021D34E3A} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
 	EndGlobalSection
 EndGlobal

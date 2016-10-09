@@ -9,7 +9,7 @@ namespace ManagedBass.WaDsp
     /// </summary>
     public static class BassWaDsp
     {
-        const string DllName = "bass_wadsp.dll";
+        const string DllName = "bass_wadsp";
         
         static IntPtr hLib;
 
@@ -40,7 +40,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Removes a Winamp DSP from the Bass DSP chain which had been set up with <see cref="ChannelSetDSP" /> before.
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <returns><see langword="true" />, if successfully removed, else <see langword="false" />. Use <see cref="Bass.LastError" /> to get the error code.</returns>
         /// <exception cref="Errors.Handle">The <paramref name="Plugin" /> is not a valid plugin handle.</exception>
         [DllImport(DllName, EntryPoint = "BASS_WADSP_ChannelRemoveDSP")]
@@ -50,7 +50,7 @@ namespace ManagedBass.WaDsp
         /// Assigns a loaded Winamp DSP to a standard BASS channel as a new DSP.
         /// <para>This method is pretty close to the <see cref="Bass.ChannelSetDSP" /> method (which is in fact internally used) but instead of setting up a user DSP method the Winamp DSP will be set up.</para>
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Handle">The BASS channel handle (HSTREAM, HMUSIC, or HRECORD) which to assign to the Winamp DSP.</param>
         /// <param name="Priority">The priority of the new DSP, which determines it's position in the Bass DSP chain - DSPs with higher priority are called before those with lower.</param>
         /// <returns>If succesful, then the new DSP's handle (HDSP) is returned, else 0 is returned. Use <see cref="Bass.LastError" /> to get the error code.</returns>
@@ -68,7 +68,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Invokes the config dialog of a loaded and started Winamp DSP.
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <returns><see langword="true" /> on success, else <see langword="false" />. Use <see cref="Bass.LastError" /> to get the error code.</returns>
         /// <remarks>The Winamp DSP must have been started via <see cref="Start" /> prior to calling this method.</remarks>
         /// <exception cref="Errors.Handle">The <paramref name="Plugin" /> is not a valid plugin handle.</exception>
@@ -85,9 +85,9 @@ namespace ManagedBass.WaDsp
         public static extern bool Free();
 
         /// <summary>
-        /// Frees and unloads a Winamp DSP library from memory which has been loaded with <see cref="Load" /> before.
+        /// Frees and unloads a Winamp DSP library from memory which has been loaded with <see cref="Load(string,int,int,int,int,WinampWinProcedure)" /> before.
         /// </summary>
-        /// <param name="Plugin">The plugin handle to unload (as returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle to unload (as returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <returns><see langword="true" /> on success, else <see langword="false" />. Use <see cref="Bass.LastError" /> to get the error code.</returns>
         /// <remarks>The Winamp DSP will automatically be stopped, if it was started before.</remarks>
         /// <exception cref="Errors.Handle">The <paramref name="Plugin" /> is not a valid plugin handle.</exception>
@@ -95,9 +95,9 @@ namespace ManagedBass.WaDsp
         public static extern bool FreeDSP(int Plugin);
 
         /// <summary>
-        /// Gets the window handle of the fake Winamp window which has been created internally when a Winamp DSP was loaded with <see cref="Load" />.
+        /// Gets the window handle of the fake Winamp window which has been created internally when a Winamp DSP was loaded with <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />.
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <returns>An IntPtr representing the window handle of the fake Winamp window or <see cref="IntPtr.Zero" /> if an error occured. Use <see cref="Bass.LastError" /> to get the error code.</returns>
         /// <exception cref="Errors.Handle">The <paramref name="Plugin" /> is not a valid plugin handle.</exception>
         /// <exception cref="Errors.Unknown">Some other problem (the internal fake Winamp window could not be created).</exception>
@@ -107,7 +107,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Returns the currently selected plugin module of a Winamp DSP.
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <returns>The selected module number (first = 0), or -1, if an error occured. Use <see cref="Bass.LastError" /> to get the error code.</returns>
         /// <exception cref="Errors.Handle">The <paramref name="Plugin" /> is not a valid plugin handle.</exception>
         /// <exception cref="Errors.Start"><see cref="Start" /> was not called (no module selected so far).</exception>
@@ -117,7 +117,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Returns the number of modules contained in the loaded Winamp DSP.
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <returns>The number of available modules or -1 if an error occured. Use <see cref="Bass.LastError" /> to get the error code.</returns>
         /// <remarks>Winamp DSPs might implement multiple different modules within the same DSP plugin.</remarks>
         /// <exception cref="Errors.Handle">The <paramref name="Plugin" /> is not a valid plugin handle.</exception>
@@ -127,7 +127,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Returns the name of a certain module of a loaded Winamp DSP.
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Module">The module number to get the name from (the first module is 0).</param>
         /// <returns>The name of the module on success or <see langword="null" /> on error (or if no module with that number exists). Use <see cref="Bass.LastError" /> to get the error code.</returns>
         /// <remarks>
@@ -148,7 +148,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Returns all module names of a Winamp DSP.
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <returns>All names of all modules contained in the Winamp DSP.</returns>
         public static IEnumerable<string> GetModuleNames(int Plugin)
         {
@@ -169,7 +169,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Returns the name of the loaded Winamp DSP plugin.
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <returns>The name of the plugin on success or <see langword="null" /> on error. Use <see cref="Bass.LastError" /> to get the error code.</returns>
         /// <exception cref="Errors.Handle">The <paramref name="Plugin" /> is not a valid plugin handle.</exception>
         public static string GetName(int Plugin)
@@ -231,7 +231,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Invokes the internal 'ModifySamples' method of the Winamp DSP directly (which is only needed for user defined <see cref="DSPProcedure" /> callbacks).
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Buffer">The IntPtr to the memory block containing the sample data to modify.</param>
         /// <param name="Length">The number of bytes contained in the buffer.</param>
         /// <returns>The number of bytes modified, which should always be the number of bytes specified when calling this method. Or 0, if an error occured.</returns>
@@ -244,7 +244,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Invokes the internal 'ModifySamples' method of the Winamp DSP directly (which is only needed for user defined <see cref="DSPProcedure" /> callbacks).
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Buffer">The array of byte values containing the sample data to modify.</param>
         /// <param name="Length">The number of bytes contained in the buffer.</param>
         /// <returns>The number of bytes modified, which should always be the number of bytes specified when calling this method. Or 0, if an error occured.</returns>
@@ -257,7 +257,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Invokes the internal 'ModifySamples' method of the Winamp DSP directly (which is only needed for user defined <see cref="DSPProcedure" /> callbacks).
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Buffer">The array of Int16 values containing the sample data to modify.</param>
         /// <param name="Length">The number of bytes contained in the buffer.</param>
         /// <returns>The number of bytes modified, which should always be the number of bytes specified when calling this method. Or 0, if an error occured.</returns>
@@ -270,7 +270,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Invokes the internal 'ModifySamples' method of the Winamp DSP directly (which is only needed for user defined <see cref="DSPProcedure" /> callbacks).
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Buffer">The array of Int32 values containing the sample data to modify.</param>
         /// <param name="Length">The number of bytes contained in the buffer.</param>
         /// <returns>The number of bytes modified, which should always be the number of bytes specified when calling this method. Or 0, if an error occured.</returns>
@@ -283,7 +283,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Invokes the internal 'ModifySamples' method of the Winamp DSP directly (which is only needed for user defined <see cref="DSPProcedure" /> callbacks).
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Buffer">The array of float values containing the sample data to modify.</param>
         /// <param name="Length">The number of bytes contained in the buffer.</param>
         /// <returns>The number of bytes modified, which should always be the number of bytes specified when calling this method. Or 0, if an error occured.</returns>
@@ -296,7 +296,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Invokes the internal 'ModifySamples' method of the Winamp DSP directly (which is only needed for user defined <see cref="DSPProcedure" /> callbacks or in a user defined <see cref="T:Un4seen.Bass.STREAMPROC" />).
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Buffer">The pointer to the memory block containing the sample data to modify.</param>
         /// <param name="Length">The number of bytes contained in the buffer.</param>
         /// <returns>
@@ -321,7 +321,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Invokes the internal 'ModifySamples' method of the Winamp DSP directly (which is only needed for user defined <see cref="DSPProcedure" /> callbacks or in a user defined <see cref="T:Un4seen.Bass.STREAMPROC" />).
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Buffer">The array of byte values containing the sample data to modify.</param>
         /// <param name="Length">The number of bytes contained in the buffer.</param>
         /// <returns>
@@ -346,7 +346,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Invokes the internal 'ModifySamples' method of the Winamp DSP directly (which is only needed for user defined <see cref="DSPProcedure" /> callbacks or in a user defined <see cref="T:Un4seen.Bass.STREAMPROC" />).
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Buffer">The array of Int16 values containing the sample data to modify.</param>
         /// <param name="Length">The number of bytes contained in the buffer.</param>
         /// <returns>
@@ -371,7 +371,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Invokes the internal 'ModifySamples' method of the Winamp DSP directly (which is only needed for user defined <see cref="DSPProcedure" /> callbacks or in a user defined <see cref="T:Un4seen.Bass.STREAMPROC" />).
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Buffer">The array of Int32 values containing the sample data to modify.</param>
         /// <param name="Length">The number of bytes contained in the buffer.</param>
         /// <returns>
@@ -396,7 +396,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Invokes the internal 'ModifySamples' method of the Winamp DSP directly (which is only needed for user defined <see cref="DSPProcedure" /> callbacks or in a user defined <see cref="T:Un4seen.Bass.STREAMPROC" />).
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Buffer">The array of float values containing the sample data to modify.</param>
         /// <param name="Length">The number of bytes contained in the buffer.</param>
         /// <returns>
@@ -496,8 +496,8 @@ namespace ManagedBass.WaDsp
         /// <returns><see langword="true" /> on success, else <see langword="false" />. Use <see cref="Bass.LastError" /> to get the error code.</returns>
         /// <remarks>
         /// The temporary plugin info workspace can be used to retrieve general information about a Winamp DSP without starting it.
-        /// <para>This method will be used in the same way <see cref="Load" /> is used.</para>
-        /// <para>NOTE: Do not use this method while you have already loaded the same Winamp plugin (e.g. via <see cref="Load" />) as this might result in any unexpected behavior, since some Winamp plugins might crash when they are loaded twice.</para>
+        /// <para>This method will be used in the same way <see cref="Load(string,int,int,int,int,WinampWinProcedure)" /> is used.</para>
+        /// <para>NOTE: Do not use this method while you have already loaded the same Winamp plugin (e.g. via <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />) as this might result in any unexpected behavior, since some Winamp plugins might crash when they are loaded twice.</para>
         /// </remarks>
         /// <exception cref="Errors.FileOpen">The <paramref name="DspFile" /> can not be found or loaded.</exception>
         /// <exception cref="Errors.FileFormat">The <paramref name="DspFile" /> doesn't seem to be a Winamp DSP library file.</exception>
@@ -508,7 +508,7 @@ namespace ManagedBass.WaDsp
         /// Assigns a channel to a Winamp DSP.
         /// <para>You only need this method, if you do NOT use the default <see cref="ChannelSetDSP" /> method, but use your own DSP callback (see <see cref="DSPProcedure" />).</para>
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Handle">The BASS channel handle (HSTREAM, HMUSIC, or HRECORD) which to assign to the Winamp DSP.</param>
         /// <returns><see langword="true" /> on success, else <see langword="false" />. Use <see cref="Bass.LastError" /> to get the error code.</returns>
         /// <remarks>You must use this method when implementing your own <see cref="DSPProcedure" /> callback before starting to play the channel.</remarks>
@@ -519,7 +519,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Set the file name for a loaded Winamp DSP plugin.
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="File">The file name to set.</param>
         /// <returns><see langword="true" /> on success, else <see langword="false" />. Use <see cref="Bass.LastError" /> to get the error code.</returns>
         /// <remarks>
@@ -535,7 +535,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Set the song title for a loaded Winamp DSP plugin.
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Title">The song title to set.</param>
         /// <returns><see langword="true" /> on success, else <see langword="false" />. Use <see cref="Bass.LastError" /> to get the error code.</returns>
         /// <remarks>
@@ -551,7 +551,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Starts a Winamp DSP.
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <param name="Module">The module number to start (the first module is 0).</param>
         /// <param name="Handle">The BASS channel handle (HSTREAM, HMUSIC, or HRECORD) for which to start the Winamp DSP. Or 0 if not applicable.</param>
         /// <returns><see langword="true" /> on success, else <see langword="false" />. Use <see cref="Bass.LastError" /> to get the error code.</returns>
@@ -572,7 +572,7 @@ namespace ManagedBass.WaDsp
         /// <summary>
         /// Stops a Winamp DSP.
         /// </summary>
-        /// <param name="Plugin">The plugin handle (returned by <see cref="Load" />).</param>
+        /// <param name="Plugin">The plugin handle (returned by <see cref="Load(string,int,int,int,int,WinampWinProcedure)" />).</param>
         /// <returns><see langword="true" /> on success, else <see langword="false" />. Use <see cref="Bass.LastError" /> to get the error code.</returns>
         /// <remarks>If the Winamp DSP was already assigned to a channel using <see cref="ChannelSetDSP" /> the DSP will be removed automatically from the channel when it is stopped.</remarks>
         /// <exception cref="Errors.Handle">The <paramref name="Plugin" /> is not a valid plugin handle.</exception>
