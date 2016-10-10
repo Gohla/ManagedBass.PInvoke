@@ -11,20 +11,46 @@ namespace ManagedBass.Vst
 	{
 		const string DllName = "bass_vst";
 
-		/// <summary>
-		/// Creates a new BASS stream based on any VST instrument plugin (VSTi).
-		/// </summary>
-		/// <param name="Frequency">The sample rate of the VSTi output (e.g. 44100).</param>
-		/// <param name="Channels">The number of channels... 1 = mono, 2 = stereo, 4 = quadraphonic, 6 = 5.1, 8 = 7.1.</param>
-		/// <param name="DllFile">The fully qualified path and file name to the VSTi plugin (a DLL file name).</param>
-		/// <param name="Flags">A combination of <see cref="BassFlags"/>.</param>
-		/// <returns>If successful, the new vst handle is returned, else 0 is returned. Use <see cref="Bass.LastError" /> to get the error code.</returns>
-		/// <remarks>
-		/// On success, the function returns the new vstHandle that must be given to the other functions.
-		/// The returned VST handle can also be given to the typical Bass.Channel* functions.
-		/// Use <see cref="ChannelFree" /> to delete and free a VST instrument channel.
-		/// </remarks>
-		public static int ChannelCreate(int Frequency, int Channels, string DllFile, BassFlags Flags)
+        static IntPtr hLib;
+
+        /// <summary>
+        /// Load this library into Memory.
+        /// </summary>
+        /// <param name="Folder">Directory to Load from... <see langword="null"/> (default) = Load from Current Directory.</param>
+        /// <returns><see langword="true" />, if the library loaded successfully, else <see langword="false" />.</returns>
+        /// <remarks>
+        /// <para>
+        /// An external library is loaded into memory when any of its methods are called for the first time.
+        /// This results in the first method call being slower than all subsequent calls.
+        /// </para>
+        /// <para>
+        /// Some BASS libraries and add-ons may introduce new options to the main BASS lib like new parameters.
+        /// But, before using these new options the respective library must be already loaded.
+        /// This method can be used to make sure, that this library has been loaded.
+        /// </para>
+        /// </remarks>
+        public static bool Load(string Folder = null) => (hLib = DynamicLibrary.Load(DllName, Folder)) != IntPtr.Zero;
+
+        /// <summary>
+        /// Unloads this library from Memory.
+        /// </summary>
+        /// <returns><see langword="true" />, if the library unloaded successfully, else <see langword="false" />.</returns>
+        public static bool Unload() => DynamicLibrary.Unload(hLib);
+
+        /// <summary>
+        /// Creates a new BASS stream based on any VST instrument plugin (VSTi).
+        /// </summary>
+        /// <param name="Frequency">The sample rate of the VSTi output (e.g. 44100).</param>
+        /// <param name="Channels">The number of channels... 1 = mono, 2 = stereo, 4 = quadraphonic, 6 = 5.1, 8 = 7.1.</param>
+        /// <param name="DllFile">The fully qualified path and file name to the VSTi plugin (a DLL file name).</param>
+        /// <param name="Flags">A combination of <see cref="BassFlags"/>.</param>
+        /// <returns>If successful, the new vst handle is returned, else 0 is returned. Use <see cref="Bass.LastError" /> to get the error code.</returns>
+        /// <remarks>
+        /// On success, the function returns the new vstHandle that must be given to the other functions.
+        /// The returned VST handle can also be given to the typical Bass.Channel* functions.
+        /// Use <see cref="ChannelFree" /> to delete and free a VST instrument channel.
+        /// </remarks>
+        public static int ChannelCreate(int Frequency, int Channels, string DllFile, BassFlags Flags)
 		{
 			return BASS_VST_ChannelCreate(Frequency, Channels, DllFile, Flags | BassFlags.Unicode);
 		}
