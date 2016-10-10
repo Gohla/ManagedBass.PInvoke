@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>4b134493-8d20-41f6-ac21-95143d1ac586</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>BassDShow</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BassDShow.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\ConnectedFiltersProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\DvpProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\EnumDevicesProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\EnumProfilesProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\VideoStreamsProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates\VideoSyncProcedure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowCallbackItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowCapture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowColorControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowConfigFlag.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowDVDGetProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowDVDMenu.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowDVDSetProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowDvpType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowError.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowInit.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowMode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerations\BassDShowSync.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\BassDShowChannelInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\BassDShowColorRange.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\BassDShowPluginInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\BassDShowStreams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\BassDShowVideoBitmap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\BassDShowVideoColors.cs" />
+  </ItemGroup>
+</Project>
