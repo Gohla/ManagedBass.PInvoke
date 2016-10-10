@@ -3,7 +3,7 @@ using System;
 namespace ManagedBass.DShow
 {
 	/// <summary>
-	/// Flags to be used with <see cref="BassDShow.ChannelSetColors" /> and <see cref="BassDShow.ChannelColorRange" />.
+	/// Flags to be used with <see cref="BassDShow.ChannelSetColors" /> and <see cref="BassDShow.ChannelColorRange(int,BassDShowColorControl,out BassDShowColorRange)" />.
 	/// </summary>
 	[Flags]
 	public enum BassDShowColorControl

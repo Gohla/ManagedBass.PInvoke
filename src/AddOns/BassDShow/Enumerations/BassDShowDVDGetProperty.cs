@@ -18,7 +18,7 @@ namespace ManagedBass.DShow
 		/// <summary>
 		/// Gets either the current title duration or position (see <see cref="CurrentTitleDuration" /> and <see cref="CurrentTitlePosition" />).
 		/// </summary>
-		CurentDVDTitle = 65552,
+		CurrentDVDTitle = 65552,
 		
 		/// <summary>
 		/// Gets the number of titles of a DVD stream.

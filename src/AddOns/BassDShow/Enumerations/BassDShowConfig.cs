@@ -1,7 +1,7 @@
 namespace ManagedBass.DShow
 {
 	/// <summary>
-	/// Configuration options to be used with <see cref="BassDShow.SetConfig" />.
+	/// Configuration options to be used with <see cref="BassDShow.SetConfig(BassDShowConfig,int)" />.
 	/// </summary>
 	public enum BassDShowConfig
 	{

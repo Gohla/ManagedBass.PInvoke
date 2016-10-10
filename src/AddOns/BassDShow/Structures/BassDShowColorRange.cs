@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 namespace ManagedBass.DShow
 {
 	/// <summary>
-	/// Used with <see cref="BassDShow.ChannelColorRange" /> to retrieve the color controls range.
+	/// Used with <see cref="BassDShow.ChannelColorRange(int,BassDShowColorControl,out BassDShowColorRange)" /> to retrieve the color controls range.
 	/// </summary>
 	[StructLayout(LayoutKind.Sequential)]
 	public struct BassDShowColorRange

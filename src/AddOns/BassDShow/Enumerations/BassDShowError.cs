@@ -79,8 +79,8 @@ namespace ManagedBass.DShow
 		/// Already registered.
 		/// </summary>
 		AlreadyRegistered,
+
 		/// <summary>
-		
 		/// Invalid Registration.
 		/// </summary>
 		InvalidRegistration

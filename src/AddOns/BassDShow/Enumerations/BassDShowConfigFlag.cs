@@ -1,9 +1,9 @@
 namespace ManagedBass.DShow
 {
-	/// <summary>
-	/// Configuration option flags to be used with <see cref="BassDShow.SetConfig" />.
-	/// </summary>
-	public enum BassDShowConfigFlag
+    /// <summary>
+    /// Configuration option flags to be used with <see cref="BassDShow.SetConfig(BassDShowConfig,int)" />.
+    /// </summary>
+    public enum BassDShowConfigFlag
 	{
 		/// <summary>
 		/// Used with <see cref="BassDShowConfig.VideoRenderer" /> to select the VMR7 Windowed renderer.
