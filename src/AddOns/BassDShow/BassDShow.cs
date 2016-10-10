@@ -8,7 +8,7 @@ namespace ManagedBass.DShow
 	/// </summary>
 	public static class BassDShow
 	{
-		const string DllName = "xVideo.dll";
+		const string DllName = "xVideo";
 
         static IntPtr hLib;
 

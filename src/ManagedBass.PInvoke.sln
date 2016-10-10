@@ -81,6 +81,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassVst", "AddOns\BassVst\B
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassDShow", "AddOns\BassDShow\BassDShow.shproj", "{4B134493-8D20-41F6-AC21-95143D1AC586}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BassWA", "AddOns\BassWA\BassWA.shproj", "{E06C51BC-6FDA-48BD-BAB2-1B485694E499}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		AddOns\BassOpus\BassOpus.projitems*{05ae14f8-70c9-4e2f-af5a-800fdd84bbd3}*SharedItemsImports = 13
@@ -139,6 +141,7 @@ Global
 		AddOns\BassVst\BassVst.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
 		AddOns\BassWaDsp\BassWaDsp.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
 		AddOns\BassWasapi\BassWasapi.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
+		AddOns\BassWA\BassWA.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
 		AddOns\BassWinamp\BassWinamp.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
 		AddOns\BassWma\BassWma.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
 		AddOns\BassWv\BassWv.projitems*{57c787d9-351e-4c61-9abb-619f6f6aa03a}*SharedItemsImports = 4
@@ -210,6 +213,7 @@ Global
 		AddOns\BassTta\BassTta.projitems*{c245f584-4dbb-4d18-936f-236bb15e1bfa}*SharedItemsImports = 13
 		AddOns\BassVst\BassVst.projitems*{ddd0925a-d10f-43bd-9130-b47021d34e3a}*SharedItemsImports = 13
 		AddOns\BassAdx\BassAdx.projitems*{dddd45bf-a967-4bb5-8ff4-47cf7e5c453f}*SharedItemsImports = 13
+		AddOns\BassWA\BassWA.projitems*{e06c51bc-6fda-48bd-bab2-1b485694e499}*SharedItemsImports = 13
 		Shared\Shared.projitems*{ec57d38f-2b7c-4547-9012-3f1aad7e8bab}*SharedItemsImports = 13
 		AddOns\BassZXTune\BassZXTune.projitems*{f054c056-249c-43d4-96e3-0c61bd70604c}*SharedItemsImports = 13
 		AddOns\BassEnc\BassEnc.projitems*{f0fc2f2c-d971-46e3-8c6c-6c8a0f3b70cd}*SharedItemsImports = 13
@@ -290,5 +294,6 @@ Global
 		{23048DEB-1819-4007-A12F-8C57872CE38A} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
 		{DDD0925A-D10F-43BD-9130-B47021D34E3A} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
 		{4B134493-8D20-41F6-AC21-95143D1AC586} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
+		{E06C51BC-6FDA-48BD-BAB2-1B485694E499} = {AAFDFAB1-3D90-434E-BCF6-42D0EEB47DD9}
 	EndGlobalSection
 EndGlobal
