@@ -54,5 +54,6 @@
   <Import Project="..\..\AddOns\BassOpus\BassOpus.projitems" Label="Shared" />
   <Import Project="..\..\AddOns\BassTta\BassTta.projitems" Label="Shared" />
   <Import Project="..\..\AddOns\BassWv\BassWv.projitems" Label="Shared" />
+  <Import Project="..\..\AddOns\BassTags\BassTags.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

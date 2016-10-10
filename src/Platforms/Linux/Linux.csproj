@@ -56,5 +56,6 @@
   <Import Project="..\..\AddOns\BassTta\BassTta.projitems" Label="Shared" />
   <Import Project="..\..\AddOns\BassWv\BassWv.projitems" Label="Shared" />
   <Import Project="..\..\AddOns\BassZXTune\BassZXTune.projitems" Label="Shared" />
+  <Import Project="..\..\AddOns\BassTags\BassTags.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -38,8 +38,6 @@ namespace ManagedBass.Asio
         /// </summary>
         /// <returns><see langword="true" />, if the library unloaded successfully, else <see langword="false" />.</returns>
         public static bool Unload() => DynamicLibrary.Unload(hLib);
-
-        static BassAsio() { Unicode = true; }
         
         #region AddDevice
         [DllImport(DllName, CharSet = CharSet.Unicode)]
