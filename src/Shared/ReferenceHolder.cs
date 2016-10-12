@@ -41,9 +41,7 @@ namespace ManagedBass
 
         void Callback(int Handle, int Channel, int Data, IntPtr User)
         {
-            var toRemove = from pair in _procedures
-                where pair.Key.Item1 == Channel
-                select pair.Key;
+            var toRemove = _procedures.Where(Pair => Pair.Key.Item1 == Channel).Select(Pair => Pair.Key).ToArray();
             
             foreach (var key in toRemove)
                 _procedures.Remove(key);
