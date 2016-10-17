@@ -38,7 +38,7 @@ namespace ManagedBass
         /// <seealso cref="FXGetParameters(int,IntPtr)"/>
         public static bool FXSetParameters(int Handle, IEffectParameter Parameters)
         {
-            var gch = GCHandle.Alloc(Parameters);
+            var gch = GCHandle.Alloc(Parameters, GCHandleType.Pinned);
 
             var result = FXSetParameters(Handle, gch.AddrOfPinnedObject());
 
@@ -76,7 +76,7 @@ namespace ManagedBass
         /// <seealso cref="FXSetParameters(int,IntPtr)"/>
         public static bool FXGetParameters(int Handle, IEffectParameter Parameters)
         {
-            var gch = GCHandle.Alloc(Parameters);
+            var gch = GCHandle.Alloc(Parameters, GCHandleType.Pinned);
 
             var result = FXGetParameters(Handle, gch.AddrOfPinnedObject());
 
